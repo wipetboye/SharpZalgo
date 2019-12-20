@@ -3,15 +3,15 @@
 
 I just improved the code for use in an entire program, and not just for Rextester.
 
-Basically, just
+The function is
 ```
-string zalgo = ZalgoString.Generate(string originalStr, bool zalgoUp, bool zalgoMid, bool zalgoDown, bool ignoreZalgoChars, ushort zalgoRate);
+string Zalgo.GenerateString(string originalStr, bool zalgoUp, bool zalgoMid, bool zalgoDown, bool ignoreZalgoChars, ushort zalgoRate);
 ```
 
 Example:
 ```
 string text = "Meow";
-string zalgo = ZalgoString.Generate(text, true, true, true, false, 5);
+string zalgo = Zalgo.GenerateString(text, true, true, true, false, 5);
 File.WriteAllText("meow.txt", zalgo);
 ```
 
