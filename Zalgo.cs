@@ -1,6 +1,6 @@
 using System;
 
-class ZalgoString {
+class Zalgo {
     public static readonly ushort[] ZalgoUp = {
         0x030d, 0x030e, 0x0304, 0x0305,
         0x033f, 0x0311, 0x0306, 0x0310,
@@ -56,7 +56,7 @@ class ZalgoString {
         return false;
     }
 
-    public static string Generate(string originalStr, bool zalgoUp, bool zalgoMid, bool zalgoDown, bool ignoreZalgoChars, ushort zalgoRate) {
+    public static string GenerateString(string originalStr, bool zalgoUp, bool zalgoMid, bool zalgoDown, bool ignoreZalgoChars, ushort zalgoRate) {
         string ret = "";
         char[] strChars = originalStr.ToCharArray();
 
