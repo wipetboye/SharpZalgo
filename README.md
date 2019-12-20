@@ -3,7 +3,7 @@
 
 I just improved the code for use in an entire program, and not just for Rextester.
 
-The function is
+Usage:
 ```
 string Zalgo.GenerateString(string originalStr, bool zalgoUp, bool zalgoMid, bool zalgoDown, bool ignoreZalgoChars, ushort zalgoRate);
 ```
@@ -15,7 +15,7 @@ string zalgo = Zalgo.GenerateString(text, true, true, true, false, 5);
 File.WriteAllText("meow.txt", zalgo);
 ```
 
-or using the type instead (ZalgoString.cs)
+Or using the type (ZalgoString.cs):
 
 ```
 ZalgoString zalgo = "Meow";
