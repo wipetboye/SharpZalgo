@@ -15,7 +15,7 @@ string zalgo = ZalgoString.Generate(text, true, true, true, false, 5);
 File.WriteAllText("meow.txt", zalgo);
 ```
 
-or using the type instead
+or using the type instead (ZalgoString.cs)
 
 ```
 ZalgoString zalgo = "Meow";
