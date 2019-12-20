@@ -5,12 +5,12 @@ I just improved the code for use in an entire program, and not just for Rexteste
 
 Basically, just
 ```
-string zalgo = Zalgo.Generate(string originalStr, bool zalgoUp, bool zalgoMid, bool zalgoDown, bool ignoreZalgoChars, ushort zalgoRate);
+string zalgo = ZalgoString.Generate(string originalStr, bool zalgoUp, bool zalgoMid, bool zalgoDown, bool ignoreZalgoChars, ushort zalgoRate);
 ```
 
 Example:
 ```
 string text = "Meow";
-string zalgo = Zalgo.Generate(text, true, true, true, false, 5);
+string zalgo = ZalgoString.Generate(text, true, true, true, false, 5);
 File.WriteAllText("meow.txt", zalgo);
 ```
