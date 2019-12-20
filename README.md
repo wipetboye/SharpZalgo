@@ -14,3 +14,12 @@ string text = "Meow";
 string zalgo = ZalgoString.Generate(text, true, true, true, false, 5);
 File.WriteAllText("meow.txt", zalgo);
 ```
+
+or using the type instead
+
+```
+ZalgoString zalgo = "Meow";
+ZalgoString intensifiedZalgo = new ZalgoString("Meow", true, true, true, false, 10);
+File.WriteAllText("meow.txt", zalgo);
+File.WriteAllText("meow2.txt", intensifiedZalgo);
+```
