@@ -66,19 +66,16 @@ class ZalgoString {
 
     private readonly Random RNG = new Random();
 
-    public static bool IsZalgoChar(char c, int ZalgoUpLen, int ZalgoDownLen, int ZalgoMidLen) {
-        for (int i = 0; i < ZalgoUpLen; i++)
+    public static bool IsZalgoChar(char c, int zalgoUpLen, int zalgoDownLen, int zalgoMidLen) {
+        for (int i = 0; i < zalgoUpLen; i++)
             if (c == (char)ZalgoUp[i])
                 return true;
-
-        for (int i = 0; i < ZalgoDownLen; i++)
+        for (int i = 0; i < zalgoDownLen; i++)
             if (c == (char)ZalgoDown[i])
                 return true;
-
-        for (int i = 0; i < ZalgoMidLen; i++)
+        for (int i = 0; i < zalgoMidLen; i++)
             if (c == (char)ZalgoMid[i])
                 return true;
-
         return false;
     }
 
@@ -91,21 +88,15 @@ class ZalgoString {
                 continue;
 
             ret += strChars[i];
-
             if (strChars[i] < 32)
                 continue;
 
-            if (zalgoUp)
-                for (int j = 0; j < RNG.Next(8) + zalgoRate; j++)
-                    ret += (char)ZalgoUp[RNG.Next(ZalgoUp.Length)];
-
-            if (zalgoMid)
-                for (int j = 0; j < (RNG.Next(6) / 2) + zalgoRate; j++)
-                    ret += (char)ZalgoMid[RNG.Next(ZalgoMid.Length)];
-
-            if (zalgoDown)
-                for (int j = 0; j < RNG.Next(64) / 4 + 3 + zalgoRate; j++)
-                    ret += (char)ZalgoDown[RNG.Next(ZalgoDown.Length)];
+            for (int j = 0; zalgoUp && j < RNG.Next(8) + zalgoRate; j++)
+                ret += (char)ZalgoUp[RNG.Next(ZalgoUp.Length)];
+            for (int j = 0; zalgoMid && j < (RNG.Next(6) / 2) + zalgoRate; j++)
+                ret += (char)ZalgoMid[RNG.Next(ZalgoMid.Length)];
+            for (int j = 0; zalgoDown && j < RNG.Next(64) / 4 + 3 + zalgoRate; j++)
+                ret += (char)ZalgoDown[RNG.Next(ZalgoDown.Length)];
         }
 
         return ret;
