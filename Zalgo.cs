@@ -58,7 +58,7 @@ class Zalgo {
         char[] strChars = originalStr.ToCharArray();
 
         for (int i = 0; i < originalStr.Length; i++) {
-            if (!ignoreZalgoChars && IsZalgoChar(strChars[i], ZalgoUp.Length, ZalgoDown.Length, ZalgoMid.Length))
+            if (!ignoreZalgoChars && IsZalgoChar(strChars[i], zalgoUp ? ZalgoUp.Length : 0, zalgoDown ? ZalgoDown.Length : 0, zalgoMid ? ZalgoMid.Length : 0))
                 continue;
 
             ret += strChars[i];
