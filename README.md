@@ -1,7 +1,7 @@
 # C# Zalgo
 ###### Forked from [marfgold1/ZalgoCSharp](https://github.com/marfgold1/ZalgoCSharp)
 
-I just improved the code for use in an entire program, and not just for Rextester.
+I forked the project and improved its code for more efficient use.
 
 Usage:
 ```
